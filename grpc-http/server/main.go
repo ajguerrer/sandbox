@@ -13,7 +13,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pb "sandbox/grpc-http/guestbook"
+	pb "github.com/ajguerrer/sandbox/grpc-http/guestbook"
 )
 
 var port = flag.Int("port", 8000, "The server port")

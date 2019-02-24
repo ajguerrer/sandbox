@@ -8,7 +8,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	pb "sandbox/grpc-http/guestbook"
+	pb "github.com/ajguerrer/sandbox/grpc-http/guestbook"
 )
 
 var serverAddr = flag.String("server_addr", "127.0.0.1:8000", "The server address in the format of host:port")
