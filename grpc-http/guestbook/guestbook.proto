@@ -1,9 +1,25 @@
 syntax = "proto3";
 
+import "google/api/annotations.proto";
+
 service GuestBook {
-  rpc AddPost (AddPostRequest) returns (AddPostResponse) {}
-  rpc UpdatePost (UpdatePostRequest) returns (UpdatePostResponse) {}
-  rpc ListPosts (ListPostsRequest) returns (ListPostsResponse) {}
+  rpc AddPost (AddPostRequest) returns (AddPostResponse) {
+    option (google.api.http) = {
+      post: "/v1/posts"
+      body: "*"
+    };
+  }
+  rpc UpdatePost (UpdatePostRequest) returns (UpdatePostResponse) {
+    option (google.api.http) = {
+      put: "/v1/posts/{id}"
+      body: "*"
+    };
+  }
+  rpc ListPosts (ListPostsRequest) returns (ListPostsResponse) {
+    option (google.api.http) = {
+      get: "/v1/posts"
+    };
+  }
 }
 
 message AddPostRequest {
