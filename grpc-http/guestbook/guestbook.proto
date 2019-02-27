@@ -2,6 +2,8 @@ syntax = "proto3";
 
 import "google/api/annotations.proto";
 
+package guestbook.v1;
+
 service GuestBook {
   rpc AddPost (AddPostRequest) returns (AddPostResponse) {
     option (google.api.http) = {

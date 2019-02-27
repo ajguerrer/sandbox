@@ -1,0 +1,19 @@
+version: '3'
+services:
+  common:
+    build:
+      context: ./
+      dockerfile: ./docker/common/Dockerfile
+    image: grpchttp/common
+  server:
+    build:
+      context: ./
+      dockerfile: ./docker/app/Dockerfile
+    image: grpchttp/app
+    network_mode: "host"
+  envoy:
+    build:
+      context: ./
+      dockerfile: ./docker/envoy/Dockerfile
+    image: grpchttp/envoy
+    network_mode: "host"

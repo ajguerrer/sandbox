@@ -16,7 +16,7 @@ import (
 	pb "github.com/ajguerrer/sandbox/grpc-http/guestbook"
 )
 
-var port = flag.Int("port", 8000, "The server port")
+var port = flag.Int("port", 9090, "The server port")
 
 type guestbookServer struct {
 	posts []*pb.Post
@@ -37,8 +37,8 @@ func main() {
 
 func newServer() *guestbookServer {
 	return &guestbookServer{posts: []*pb.Post{
-		{Title: "First post", Body: "This is the first post"},
-		{Title: "Second post", Body: "This is the second post"},
+		{Id: uuid.New().String(), Title: "First post", Body: "This is the first post"},
+		{Id: uuid.New().String(), Title: "Second post", Body: "This is the second post"},
 	}}
 }
 

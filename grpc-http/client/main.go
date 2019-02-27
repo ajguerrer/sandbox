@@ -11,7 +11,7 @@ import (
 	pb "github.com/ajguerrer/sandbox/grpc-http/guestbook"
 )
 
-var serverAddr = flag.String("server_addr", "127.0.0.1:8000", "The server address in the format of host:port")
+var serverAddr = flag.String("server_addr", "127.0.0.1:9090", "The server address in the format of host:port")
 
 func main() {
 	flag.Parse()
