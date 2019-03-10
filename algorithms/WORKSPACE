@@ -1,7 +1,5 @@
 workspace(name = "algorithms")
-
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
 # abseil
 http_archive(
     name = "absl",
