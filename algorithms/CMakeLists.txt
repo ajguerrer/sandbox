@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.11...3.13)
 
 project(Algorithms LANGUAGES CXX)
 
@@ -8,6 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(CMake/FetchGoogleTest.cmake)
 include(CMake/FetchAbseil.cmake)
+include(CMake/ClangTidy.cmake)
 
 include(CTest)
 enable_testing()
